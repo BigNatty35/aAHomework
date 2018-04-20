@@ -1,5 +1,5 @@
 class Stack
-  attr_accessor
+  attr_accessor :stack
 
   def initialize
     @stack = []
@@ -10,6 +10,26 @@ class Stack
   end
 
   def remove
+    @stack.pop
+  end
+
+  def show
+    @stack
+  end
+
+end
+
+class Queue
+
+  def initialize
+    @stack = []
+  end
+
+  def enqueue(el)
+    @stack.unshift(el)
+  end
+
+  def dequeue
     @stack.pop
   end
 
